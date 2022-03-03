@@ -1,0 +1,14 @@
+<template>
+    <template if:true={loading}>
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+    </template>
+    <template if:false={loading}>
+        <template if:true={applicationIds}>
+            <p>The records Ids were passed to me</p>
+        </template>
+        <template if:false={applicationIds}>
+            
+            <p>Couldn't find the record Ids</p>
+        </template>
+    </template>
+</template>
